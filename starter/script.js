@@ -11,13 +11,13 @@
 // document.querySelector('.guess').value = 23;
 // console.log(document.querySelector('.guess').value);
 
-const secretNumber = Math.trunc(Math.random()*20) + 1;
+let secretNumber = Math.trunc(Math.random()*20) + 1;
 
 let score = 20;
 let highscore = 0;
 
 document.querySelector('.check').addEventListener ('click', function () {
-  const guess =Number (document.querySelector('.guess').value);
+  const guess = Number (document.querySelector('.guess').value);
   console.log(guess);
   
   // When ther is no input 
@@ -63,8 +63,8 @@ document.querySelector('.highscore').textContent = highscore;
 });
 
  document.querySelector('.again').addEventListener('click', function () {
-  score = 20;
-  // secretNumber = Math.trunc(Math.random() * 20) + 1;
+   score = 20;
+  secretNumber = Math.trunc(Math.random() * 20) + 1;
 
   document.querySelector('.message').textContent = 'Start guessing...';
   // displayMessage('Start guessing...');
